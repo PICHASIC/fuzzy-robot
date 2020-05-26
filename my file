@@ -1,0 +1,25 @@
+list=[]
+
+for i in range(9999999999999999):      #берем исла от 0 и до "бесконечности"
+    
+    delitel=0
+    
+    for ii in range(i):       # делим число i на числа от 0 и доо числа i
+        
+        try:
+            if i%ii==0:       #если делится без остатка добавляем к количеству делителей 1
+                delitel+=1
+            else:
+                continue
+            
+        except:
+            continue
+          
+    if delitel==1:
+            list.append(i)        #если только 1 раз оно поделилось без остатка то оно простое и добавляется в список
+    if len(list)==100:
+    
+          break
+print(list)
+print(len(list))
+print(list[-1])
