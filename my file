@@ -1,13 +1,12 @@
-list=[]
-
-for i in range(9999999999999999):      #берем исла от 0 и до "бесконечности"
-    
-    delitel=0
-    
-    for ii in range(i):       # делим число i на числа от 0 и доо числа i
+list = []
+i=0
+while len(list)<10000:
+    delitel = 0
+    i+=1
+    for ii in range(i):    # делим число i на числа от 0 и доо числа i
         
         try:
-            if i%ii==0:       #если делится без остатка добавляем к количеству делителей 1
+            if i%ii==0:     #если делится без остатка добавляем к количеству делителей 1
                 delitel+=1
             else:
                 continue
@@ -16,10 +15,8 @@ for i in range(9999999999999999):      #берем исла от 0 и до "бе
             continue
           
     if delitel==1:
-            list.append(i)        #если только 1 раз оно поделилось без остатка то оно простое и добавляется в список
-    if len(list)==100:
-    
-          break
+            list.append(i)
+            
 print(list)
 print(len(list))
-print(list[-1])
+print(list[-1])  
